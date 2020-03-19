@@ -20,27 +20,34 @@
     var CONFIG = {"hostname":"xxxxiiii.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ashellyBlog">
-<meta property="og:url" content="https://xxxxiiii.github.io/index.html">
+  <meta name="description" content="基础部分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue_学习笔记">
+<meta property="og:url" content="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/index.html">
 <meta property="og:site_name" content="ashellyBlog">
+<meta property="og:description" content="基础部分">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/vue_lifecycle.png">
+<meta property="article:published_time" content="2020-03-19T12:22:40.000Z">
+<meta property="article:modified_time" content="2020-03-19T12:43:46.670Z">
 <meta property="article:author" content="ashelly">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/vue_lifecycle.png">
 
-<link rel="canonical" href="https://xxxxiiii.github.io/">
+<link rel="canonical" href="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false
+    isHome : false,
+    isPost : true
   };
 </script>
 
-  <title>ashellyBlog</title>
+  <title>vue_学习笔记 | ashellyBlog</title>
   
 
 
@@ -155,89 +162,10 @@
             
 
   <div class="posts-expand">
-    
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ashelly">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ashellyBlog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" class="post-title-link" itemprop="url">vue-学习笔记(二)</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-19 20:43:22 / 修改时间：22:52:42" itemprop="dateCreated datePublished" datetime="2020-03-19T20:43:22+08:00">2020-03-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <p><em>组件化思想：将一个页面拆分成一个个小的功能块，每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就变得非常容易。</em></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   
   
-  
-
-    
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -251,8 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="post-title-link" itemprop="url">vue_学习笔记</a>
+          vue_学习笔记
         </h1>
 
         <div class="post-meta">
@@ -286,190 +213,74 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-    
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xxxxiiii.github.io/2020/03/15/hexo%E6%90%AD%E8%BD%BD%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ashelly">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ashellyBlog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/15/hexo%E6%90%AD%E8%BD%BD%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">hexo搭载博客并部署到github</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-15 16:57:41 / 修改时间：17:07:30" itemprop="dateCreated datePublished" datetime="2020-03-15T16:57:41+08:00">2020-03-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>周末用hexo搭载了一个个人博客并部署到github上，其他同学有的我也要有，嘻嘻嘻</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/15/hexo%E6%90%AD%E8%BD%BD%E5%8D%9A%E5%AE%A2/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xxxxiiii.github.io/2020/03/14/js%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ashelly">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ashellyBlog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/14/js%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">js垃圾回收机制</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-14 21:23:51" itemprop="dateCreated datePublished" datetime="2020-03-14T21:23:51+08:00">2020-03-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-15 17:09:43" itemprop="dateModified" datetime="2020-03-15T17:09:43+08:00">2020-03-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>什么是垃圾？</strong></p>
+        <h4 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h4><a id="more"></a>
+<h2 id="Vue是一个渐进式框架：渐进式意味着可以将Vue作为应用的一部分嵌入其中，带来更丰富的交互体验。"><a href="#Vue是一个渐进式框架：渐进式意味着可以将Vue作为应用的一部分嵌入其中，带来更丰富的交互体验。" class="headerlink" title="Vue是一个渐进式框架：渐进式意味着可以将Vue作为应用的一部分嵌入其中，带来更丰富的交互体验。"></a><em>Vue是一个渐进式框架：</em>渐进式意味着可以将Vue作为应用的一部分嵌入其中，带来更丰富的交互体验。</h2><p><strong>Vue的特点和Web开发中常见的高级功能：</strong></p>
 <ul>
-<li>JavaScript 中内存管理的主要概念是可达性，没有被引用的对象或者是根访问不到它们的就是垃圾，要被清除。</li>
+<li>解耦数据和视图</li>
+<li>可复用组件</li>
+<li>前端路由技术</li>
+<li>状态管理</li>
+<li>虚拟DOM</li>
 </ul>
 <hr>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/03/14/js%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<h5 id="v-on的修饰符："><a href="#v-on的修饰符：" class="headerlink" title="v-on的修饰符："></a>v-on的修饰符：</h5><ul>
+<li>.stop 停止冒泡 =&gt; 调用event.stopPropagation()</li>
+<li>.prevent 阻止默认事件 =&gt; 调用event.preventDefault()</li>
+<li>:keyup 监听某个键盘的键帽</li>
+<li>.once 只触发一次回调</li>
+</ul>
+<hr>
+<h2 id="计算属性和methods的不同：-vue内部会缓存计算属性，计算属性没有改变值时多次调用只执行一次代码，而methods不会，调用几次就会执行几次代码"><a href="#计算属性和methods的不同：-vue内部会缓存计算属性，计算属性没有改变值时多次调用只执行一次代码，而methods不会，调用几次就会执行几次代码" class="headerlink" title="计算属性和methods的不同： vue内部会缓存计算属性，计算属性没有改变值时多次调用只执行一次代码，而methods不会，调用几次就会执行几次代码"></a><em>计算属性和methods的不同：</em> vue内部会缓存计算属性，计算属性没有改变值时多次调用只执行一次代码，而methods不会，调用几次就会执行几次代码</h2><p><em>v-if和v-show的不同：</em>v-if 当条件为false时，包含v-if指令的元素不会存在在dom中，v-show 当条件为false时，会给元素加一个行内样式：display:none。<br>当需要在显示与隐藏之间切换很频繁时用v-show,切换频率不高时，用v-if</p>
+<hr>
+<h5 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h5><p><em>v-model背后本质是包含两个操作,v-bind绑定一个属性,v-on指令给当前元素绑定Input事件</em><br>v-model的修饰符</p>
+<ul>
+<li>.lazy 失去焦点或敲回车后才会更新</li>
+<li>.number 将数据类型设置为number</li>
+<li>.trim 去除空格修饰符</li>
+</ul>
+<hr>
+<p><em>较少用的指令：</em></p>
+<ul>
+<li>v-once:首次使用时展示数据，数据改变时页面不会随着数据的改变而改变</li>
+<li>v-pre：把文本原封不动的展示出来，不进行解析</li>
+<li>v-cloak:vue解析前div中有v-cloak属性,解析后没有</li>
+</ul>
+<hr>
+<h5 id="vue的生命周期"><a href="#vue的生命周期" class="headerlink" title="vue的生命周期"></a>vue的生命周期</h5><p><img src="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/vue_lifecycle.png" alt="哎呀网络不好哟"></p>
+
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/15/%E6%8F%90%E9%AB%98%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E7%9A%84%E6%96%B9%E6%B3%95/" rel="prev" title="提高英语听力的方法">
+      <i class="fa fa-chevron-left"></i> 提高英语听力的方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" rel="next" title="vue-学习笔记(二)">
+      vue-学习笔记(二) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
 
-    
   </div>
-
-  
-
 
 
           </div>
@@ -520,6 +331,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础部分"><span class="nav-number">1.</span> <span class="nav-text">基础部分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue是一个渐进式框架：渐进式意味着可以将Vue作为应用的一部分嵌入其中，带来更丰富的交互体验。"><span class="nav-number"></span> <span class="nav-text">Vue是一个渐进式框架：渐进式意味着可以将Vue作为应用的一部分嵌入其中，带来更丰富的交互体验。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on的修饰符："><span class="nav-number">0.1.</span> <span class="nav-text">v-on的修饰符：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算属性和methods的不同：-vue内部会缓存计算属性，计算属性没有改变值时多次调用只执行一次代码，而methods不会，调用几次就会执行几次代码"><span class="nav-number"></span> <span class="nav-text">计算属性和methods的不同： vue内部会缓存计算属性，计算属性没有改变值时多次调用只执行一次代码，而methods不会，调用几次就会执行几次代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-model"><span class="nav-number">0.1.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vue的生命周期"><span class="nav-number">0.2.</span> <span class="nav-text">vue的生命周期</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
