@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"xxxxiiii.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="组件化思想">
+  <meta name="description" content="组件化思想将一个页面拆分成一个个小的功能块，每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就变得非常容易。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue-学习笔记-二">
+<meta property="og:title" content="vue-组件化开发">
 <meta property="og:url" content="https://xxxxiiii.github.io/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/index.html">
 <meta property="og:site_name" content="ashellyBlog">
-<meta property="og:description" content="组件化思想">
+<meta property="og:description" content="组件化思想将一个页面拆分成一个个小的功能块，每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就变得非常容易。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-19T12:43:22.000Z">
-<meta property="article:modified_time" content="2020-03-19T15:45:03.174Z">
+<meta property="article:modified_time" content="2020-03-21T04:49:52.548Z">
 <meta property="article:author" content="ashelly">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>vue-学习笔记-二 | ashellyBlog</title>
+  <title>vue-组件化开发 | ashellyBlog</title>
   
 
 
@@ -177,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          vue-学习笔记-二
+          vue-组件化开发
         </h1>
 
         <div class="post-meta">
@@ -186,10 +186,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-03-19 20:43:22 / 修改时间：23:45:03" itemprop="dateCreated datePublished" datetime="2020-03-19T20:43:22+08:00">2020-03-19</time>
+              <time title="创建时间：2020-03-19 20:43:22" itemprop="dateCreated datePublished" datetime="2020-03-19T20:43:22+08:00">2020-03-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-21 12:49:52" itemprop="dateModified" datetime="2020-03-21T12:49:52+08:00">2020-03-21</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -211,10 +217,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="组件化思想"><a href="#组件化思想" class="headerlink" title="组件化思想"></a>组件化思想</h5><a id="more"></a>
-<p>将一个页面拆分成一个个小的功能块，每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就变得非常容易。</p>
+        <h5 id="组件化思想"><a href="#组件化思想" class="headerlink" title="组件化思想"></a>组件化思想</h5><p>将一个页面拆分成一个个小的功能块，每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就变得非常容易。</p>
 <hr>
-<h5 id="组件化是vue中的重要思想"><a href="#组件化是vue中的重要思想" class="headerlink" title="组件化是vue中的重要思想"></a>组件化是vue中的重要思想</h5><p>-它提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造我们的应用。<br>-任何应用都会被抽象成一颗组件树。</p>
+<a id="more"></a>
+
+<h5 id="组件化是vue中的重要思想"><a href="#组件化是vue中的重要思想" class="headerlink" title="组件化是vue中的重要思想"></a>组件化是vue中的重要思想</h5><ul>
+<li>它提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造我们的应用。</li>
+<li>任何应用都会被抽象成一颗组件树。</li>
+</ul>
 <hr>
 <h5 id="注册组件的步骤"><a href="#注册组件的步骤" class="headerlink" title="注册组件的步骤"></a>注册组件的步骤</h5><ol>
 <li>创造组件构造器：通过调用Vue.extend()方法</li>
@@ -222,17 +232,83 @@
 <li>使用组件：在Vue实例作用范围内</li>
 </ol>
 <hr>
-<h5 id="组件对象的data属性"><a href="#组件对象的data属性" class="headerlink" title="组件对象的data属性"></a>组件对象的data属性</h5><p>data属性必须是一个函数：多次调用时，返回的都是一个新对象，组件间不会相互影响。</p>
+<h5 id="组件对象的data属性"><a href="#组件对象的data属性" class="headerlink" title="组件对象的data属性"></a>组件对象的data属性</h5><ul>
+<li>data属性必须是一个函数：多次调用时，返回的都是一个新对象，组件间不会相互影响。</li>
+</ul>
 <hr>
 <h5 id="组件间的通信"><a href="#组件间的通信" class="headerlink" title="组件间的通信"></a>组件间的通信</h5><ul>
-<li>父组件通过props属性向子组件传递数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">      &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">	&lt;cpn :cmessage&#x3D;&quot;message&quot;&gt;&lt;&#x2F;cpn&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;template id&#x3D;&quot;cpn&quot;&gt;</span><br><span class="line">	&lt;p&gt;&#123;&#123;cmessage&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	const app &#x3D; new Vue(&#123;</span><br><span class="line">		el: &#39;#app&#39;,</span><br><span class="line">		data: &#123;</span><br><span class="line">			message: &#39;xxxx&#39;</span><br><span class="line">		&#125;,</span><br><span class="line">		components: &#123;</span><br><span class="line">			cpn: &#123;</span><br><span class="line">				template: &#39;#cpn&#39;,</span><br><span class="line">				props: [&#39;cmessage&#39;]</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
-<li>子组件通过定义事件向父组件传递数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">			&lt;p&gt;&#123;&#123;total&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">			&lt;cpn v-on:decrement&#x3D;&quot;btnClick&quot; v-on:increment&#x3D;&quot;btnClick&quot;&gt;&lt;&#x2F;cpn&gt;</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;template id&#x3D;&quot;cpn&quot;&gt;</span><br><span class="line">			&lt;div&gt;</span><br><span class="line">				&lt;button type&#x3D;&quot;button&quot; @click&#x3D;&quot;decrement&quot;&gt;-&lt;&#x2F;button&gt;</span><br><span class="line">				&lt;button type&#x3D;&quot;button&quot; @click&#x3D;&quot;increment&quot;&gt;+&lt;&#x2F;button&gt;</span><br><span class="line">			&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;&#x2F;template&gt;</span><br><span class="line">		&lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			const app &#x3D; new Vue(&#123;</span><br><span class="line">				el: &#39;#app&#39;,</span><br><span class="line">				data: &#123;</span><br><span class="line">					total: 0</span><br><span class="line">				&#125;,</span><br><span class="line">				methods: &#123;</span><br><span class="line">					btnClick(data) &#123;</span><br><span class="line">						this.total &#x3D; data;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;,</span><br><span class="line">				components: &#123;</span><br><span class="line">					cpn: &#123;</span><br><span class="line">						template: &#39;#cpn&#39;,</span><br><span class="line">						data() &#123;</span><br><span class="line">							return &#123;</span><br><span class="line">								count: 0</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;,</span><br><span class="line">						methods: &#123;</span><br><span class="line">							increment() &#123;</span><br><span class="line">								this.count++;</span><br><span class="line">								this.$emit(&#39;increment&#39;, this.count)</span><br><span class="line">							&#125;,</span><br><span class="line">							decrement() &#123;</span><br><span class="line">								if (this.count) &#123;</span><br><span class="line">									this.count--;</span><br><span class="line">									this.$emit(&#39;decrement&#39;, this.count)</span><br><span class="line">								&#125;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">		&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注：在&lt;template&gt;&lt;&#x2F;template&gt;标签内用&lt;div&gt;&lt;&#x2F;div&gt;把子组件的布局包起来</span><br></pre></td></tr></table></figure>
-
+<li>父组件通过props属性向子组件传递数据<ul>
+<li>子组件是不能引用父组件或者Vue实例的数据的，但是在开发中 有些数据确实需要从上层传递到下层的。比如在一个页面中，从服务器请求数据，需要在子组件中显示，这时需要从父组件传递数据给子组件。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">	cpn: &#123;</span><br><span class="line">		template: <span class="string">'#cpn'</span>,</span><br><span class="line">              <span class="comment">// 形式一：字符串数组，数组中的字符串就是传递时的名称</span></span><br><span class="line">		<span class="comment">// props: ['prop']</span></span><br><span class="line">		<span class="comment">// 形式二：对象(常用)</span></span><br><span class="line">		props: &#123;</span><br><span class="line">			<span class="comment">// 1. 类型限制</span></span><br><span class="line">			propA: <span class="built_in">Array</span></span><br><span class="line">			<span class="comment">// 2. 提供默认值,必传值required为true时，propB就是必传的</span></span><br><span class="line">			propB: &#123;</span><br><span class="line">				type: <span class="built_in">String</span>,</span><br><span class="line">				<span class="keyword">default</span>: <span class="string">'xxxx'</span>,</span><br><span class="line">				required: <span class="literal">true</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 3. 类型为对象或数组，默认值必须为函数</span></span><br><span class="line">			propC: &#123;</span><br><span class="line">				type: <span class="built_in">Array</span>,</span><br><span class="line">				<span class="keyword">default</span>() &#123;</span><br><span class="line">					<span class="keyword">return</span> []</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 4. 自定义验证函数</span></span><br><span class="line">			propD: &#123;</span><br><span class="line">				validator(value)&#123;</span><br><span class="line">					<span class="keyword">return</span> [<span class="string">'success'</span>,<span class="string">'warning'</span>,<span class="string">'danger'</span>].indexOf(value) != <span class="number">-1</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 5. 自定义类型，将变量类型定义为该类型</span></span><br><span class="line">			propF: Person</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>子组件中自定义事件通过$emit向父组件发送消息，父组件中通过v-on监听事件<ul>
+<li>比如：购物网站分类页，点击其中一个小分类后，父组件接受到信号后去请求对应的商品列表</li>
+</ul>
 </li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">	&lt;cpn @itemclick=<span class="string">"cpnClick"</span>&gt;&lt;<span class="regexp">/cpn&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">	&lt;template id=<span class="string">"cpn"</span>&gt;</span><br><span class="line">		&lt;div&gt;</span><br><span class="line">			&lt;button v-<span class="keyword">for</span>=<span class="string">"item in categories"</span> @click=<span class="string">"btnClick(item)"</span>&gt;&#123;&#123;item.name&#125;&#125;&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">		&lt;/</span>div&gt;</span><br><span class="line">	&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">		&lt;script src="../</span>js/vue.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">		&lt;script&gt;</span></span><br><span class="line"><span class="string">			const app = new Vue(&#123;</span></span><br><span class="line"><span class="string">				el: '#app',</span></span><br><span class="line"><span class="string">				data: &#123;&#125;,</span></span><br><span class="line"><span class="string">				methods: &#123;</span></span><br><span class="line"><span class="string">					cpnClick() &#123;</span></span><br><span class="line"><span class="string">						console.log('click')</span></span><br><span class="line"><span class="string">					&#125;</span></span><br><span class="line"><span class="string">				&#125;,</span></span><br><span class="line"><span class="string">				components: &#123;</span></span><br><span class="line"><span class="string">					cpn: &#123;</span></span><br><span class="line"><span class="string">						template: '#cpn',</span></span><br><span class="line"><span class="string">						data() &#123;</span></span><br><span class="line"><span class="string">							return &#123;</span></span><br><span class="line"><span class="string">								categories: [&#123;</span></span><br><span class="line"><span class="string">										id: 1,</span></span><br><span class="line"><span class="string">										name: '热门推荐'</span></span><br><span class="line"><span class="string">									&#125;,</span></span><br><span class="line"><span class="string">									&#123;</span></span><br><span class="line"><span class="string">										id: 2,</span></span><br><span class="line"><span class="string">										name: '手机数码'</span></span><br><span class="line"><span class="string">									&#125;,</span></span><br><span class="line"><span class="string">									&#123;</span></span><br><span class="line"><span class="string">										id: 3,</span></span><br><span class="line"><span class="string">										name: '家用家电'</span></span><br><span class="line"><span class="string">									&#125;,</span></span><br><span class="line"><span class="string">									&#123;</span></span><br><span class="line"><span class="string">										id: 4,</span></span><br><span class="line"><span class="string">										name: '电脑办公'</span></span><br><span class="line"><span class="string">									&#125;,</span></span><br><span class="line"><span class="string">								]</span></span><br><span class="line"><span class="string">							&#125;</span></span><br><span class="line"><span class="string">						&#125;,</span></span><br><span class="line"><span class="string">						methods: &#123;</span></span><br><span class="line"><span class="string">							btnClick(item) &#123;</span></span><br><span class="line"><span class="string">								this.$emit('itemclick')</span></span><br><span class="line"><span class="string">							&#125;</span></span><br><span class="line"><span class="string">						&#125;</span></span><br><span class="line"><span class="string">					&#125;</span></span><br><span class="line"><span class="string">				&#125;</span></span><br><span class="line"><span class="string">			&#125;)</span></span><br><span class="line"><span class="string">		&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注：1. 在template标签内必须要用一个根标签把子组件的布局包起来</span><br><span class="line">2. 目前，子组件变量在父组件模板中使用时不支持驼峰命名法</span><br><span class="line">3. 子组件最好避免直接修改props的内容，可以在data修改</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>父组件通过$children(不常用)/$refs访问子组件，可以直接调用子组件的属性和方法</p>
+<ul>
+<li><p>this.$children 是一个数组类型</p>
+</li>
+<li><p>this.$refs 是一个对象类型，子组件使用时定义一个属性，如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;cpn ref &#x3D; &quot;xxx&quot;&gt;&lt;&#x2F;cpn&gt;</span><br></pre></td></tr></table></figure>
+
+<p>xxx相当于是子组件的名字，父组件访问：this.$refs.xxx</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>子组件通过$parent访问父组件(开发中不建议使用)</li>
+<li>子组件通过$root访问根组件即vue实例</li>
+</ul>
+<hr>
 <h5 id="slot-插槽"><a href="#slot-插槽" class="headerlink" title="slot(插槽)"></a>slot(插槽)</h5><p><em>抽取共性，保留不同：将共性抽取到组件中，将不同暴露为插槽</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 插槽的基本使用：&lt;slot&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">- 插槽的默认值使用：&lt;slot&gt;&lt;button&gt;&lt;&#x2F;button&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">- 替换插槽的默认值：直接用&lt;span&gt;&lt;&#x2F;span&gt;标签替换</span><br><span class="line">- 具名插槽：&lt;slot name &#x3D; &quot;xxxx&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">- 编译作用域：父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>为什么要使用slot?</strong><ul>
+<li>在生活中很多地方都有插槽，电脑的USB插槽，插板中的电源插槽</li>
+<li>插槽的目的是让我们原有的设备具备扩展性</li>
+<li>组件的插槽也是为了让我们封装的组件具有更高的扩展性</li>
+<li>让使用者决定组件内部内容要填充什么。比如移动网站的导航栏</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>插槽的使用</strong></p>
+<ul>
+<li>插槽的基本使用：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot&gt;&lt;&#x2F;slot&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>插槽的默认值使用：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot&gt;&lt;button&gt;&lt;&#x2F;button&gt;&lt;&#x2F;slot&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>替换插槽的默认值：直接用标签替换</li>
+<li>具名插槽：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot name &#x3D; &quot;xxxx&quot;&gt;&lt;&#x2F;slot&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>编译作用域：</strong></p>
+</li>
+<li><p>父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的。</p>
+</li>
+<li><p><strong>作用域插槽：</strong></p>
+<ul>
+<li><p>父组件替换插槽的标签，但是内容由子组件来提供</p>
+</li>
+<li><p>在子组件的slot标签中定义属性，绑定子组件中的数据。父组件中在template标签中用v-slot拿到slot对象，通过定义的属性获取子组件绑定的数据。</p>
+</li>
+</ul>
+</li>
+</ul>
+
     </div>
 
     
@@ -250,12 +326,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" rel="prev" title="vue-学习笔记-一">
-      <i class="fa fa-chevron-left"></i> vue-学习笔记-一
+    <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" rel="prev" title="vue-基础部分">
+      <i class="fa fa-chevron-left"></i> vue-基础部分
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" rel="next" title="vue-学习笔记-三">
-      vue-学习笔记-三 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/03/19/vue-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" rel="next" title="vue-模块化开发之webpack">
+      vue-模块化开发之webpack <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -332,7 +408,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -345,7 +421,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -384,7 +460,7 @@
   </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.1k字</span>
+  <span class="post-count">博客全站共4.2k字</span>
 </div>
         
 
