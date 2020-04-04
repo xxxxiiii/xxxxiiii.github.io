@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"xxxxiiii.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="什么是垃圾？  JavaScript 中内存管理的主要概念是可达性，没有被引用的对象或者是根访问不到它们的就是垃圾，要被清除。">
+  <meta name="description" content="Vue中发送网络请求有非常多的方式。那么在开发中我们要如何选择呢？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js垃圾回收机制">
-<meta property="og:url" content="https://xxxxiiii.github.io/2020/03/14/js%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/index.html">
+<meta property="og:title" content="vue-axios">
+<meta property="og:url" content="https://xxxxiiii.github.io/2020/03/30/vue-axios/index.html">
 <meta property="og:site_name" content="ashellyBlog">
-<meta property="og:description" content="什么是垃圾？  JavaScript 中内存管理的主要概念是可达性，没有被引用的对象或者是根访问不到它们的就是垃圾，要被清除。">
+<meta property="og:description" content="Vue中发送网络请求有非常多的方式。那么在开发中我们要如何选择呢？">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-14T13:23:51.000Z">
-<meta property="article:modified_time" content="2020-03-15T09:09:43.066Z">
+<meta property="article:published_time" content="2020-03-30T08:22:22.000Z">
+<meta property="article:modified_time" content="2020-04-04T15:27:07.555Z">
 <meta property="article:author" content="ashelly">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xxxxiiii.github.io/2020/03/14/js%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
+<link rel="canonical" href="https://xxxxiiii.github.io/2020/03/30/vue-axios/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>js垃圾回收机制 | ashellyBlog</title>
+  <title>vue-axios | ashellyBlog</title>
   
 
 
@@ -164,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xxxxiiii.github.io/2020/03/14/js%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
+    <link itemprop="mainEntityOfPage" href="https://xxxxiiii.github.io/2020/03/30/vue-axios/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -177,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          js垃圾回收机制
+          vue-axios
         </h1>
 
         <div class="post-meta">
@@ -187,14 +187,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-14 21:23:51" itemprop="dateCreated datePublished" datetime="2020-03-14T21:23:51+08:00">2020-03-14</time>
+              <time title="创建时间：2020-03-30 16:22:22" itemprop="dateCreated datePublished" datetime="2020-03-30T16:22:22+08:00">2020-03-30</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-15 17:09:43" itemprop="dateModified" datetime="2020-03-15T17:09:43+08:00">2020-03-15</time>
+                <time title="修改时间：2020-04-04 23:27:07" itemprop="dateModified" datetime="2020-04-04T23:27:07+08:00">2020-04-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -217,28 +217,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>什么是垃圾？</strong></p>
-<ul>
-<li>JavaScript 中内存管理的主要概念是可达性，没有被引用的对象或者是根访问不到它们的就是垃圾，要被清除。</li>
-</ul>
-<hr>
+        <p>Vue中发送网络请求有非常多的方式。那么在开发中我们要如何选择呢？</p>
 <a id="more"></a>
 
-<p>  <strong>垃圾回收机制</strong></p>
 <ul>
-<li>定期（周期性）找出那些不再用到的内存（变量），然后释放其内存。</li>
-<li>两种常见的垃圾回收方式<br> <strong>标记清除：</strong></li>
+<li><p>传统的Ajax(基于XMLHttpRequest)</p>
+<ul>
+<li>配置和调用方式等非常混乱，所以真实开发中很少直接使用，而是使用jquery-Ajax。</li>
 </ul>
-<blockquote>
-<p>垃圾回收机制在运行的时候会给存储在内存中的所有变量都加上标记（可以是任何标记方式），然后，它会去掉处在环境中的变量及被环境中的变量引用的变量标记（闭包）。而在此之后剩下的带有标记的变量被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了。最后垃圾回收机制到下一个周期运行时，将释放这些变量的内存，回收它们所占用的空间</p>
-</blockquote>
-<html><hr></html>
+</li>
+<li><p>jquery-Ajax</p>
+<ul>
+<li>相对于传统的Ajax来说非常好用。</li>
+<li>但是在Vue的整个开发中都是不需要使用jquery的。jquery的代码1w+行，而Vue的代码也才1w+行，如果为了进行网络请求而引进这个重量级的框架有点冗余。</li>
+</ul>
+</li>
+<li><p>Vue-resource(Vue1.x时推出的)</p>
+<ul>
+<li>Vue-resource的体积相对于jquery来说小很多。</li>
+<li>在Vue2.0推出后，Vue作者就在github的Issues中说明了去掉Vue-resource，并且不会再更新和维护，这对以后的项目开发和维护存在很大的隐患。</li>
+</ul>
+</li>
+<li><p>axios(Vue2.0推出)</p>
+<ul>
+<li>axios有很多优点，如：在浏览器中发送XMLHttpRequests请求；在node.js中发送http请求；支持Promise API；拦截请求和响应；转换请求和响应数据等等。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>模块封装：若多个组件都需要网络请求，这样对第三方框架依赖性太高，这时我们需要对框架进行封装，需要时直接引入就行。</p>
+<p>axios提供了拦截器，用于我们在发送每次请求或者得到响应后，进行响应的处理，处理完之后一定要把结果返回</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 请求拦截</span></span><br><span class="line">    instance.interceptors.request.use(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 1. 比如config中的一些信息不符合服务器的要求</span></span><br><span class="line">        <span class="comment">// 2. 比如每次发送网络请求时，都希望在界面中显示一个请求的图标</span></span><br><span class="line">        <span class="comment">// 3.某些网络请求(比如登录(token))，必须携带一些特殊的信息</span></span><br><span class="line">        <span class="keyword">return</span> config;</span><br><span class="line">    &#125;, err =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 响应拦截</span></span><br><span class="line">    instance.interceptors.response.use(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> res.data</span><br><span class="line">    &#125;,err =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
 
-<p>   <strong>引用计数：</strong> <em>跟踪记录每个值被引用的次数.</em></p>
-<blockquote>
-<p>当声明了一个变量并将一个引用类型赋值给该变量时，则这个值的引用次数就是1。相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数就减1。当这个引用次数变成0时，则说明没有办法再访问这个值了，因而就可以将其所占的内存空间给收回来。这样，垃圾收集器下次再运行时，它就会释放那些引用次数为0的值所占的内存。</p>
-</blockquote>
-<p>最重要的还是要靠个人理解啦！   </p>
+<p>完整网络请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//request.js</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">        baseURL: <span class="string">''</span>,</span><br><span class="line">        timeout: <span class="number">5000</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// axios拦截器</span></span><br><span class="line">    <span class="comment">// 请求拦截</span></span><br><span class="line">    instance.interceptors.request.use(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 1. 比如config中的一些信息不符合服务器的要求</span></span><br><span class="line">        <span class="comment">// 2. 比如每次发送网络请求时，都希望在界面中显示一个请求的图标</span></span><br><span class="line">        <span class="comment">// 3.某些网络请求(比如登录(token))，必须携带一些特殊的信息</span></span><br><span class="line">        <span class="keyword">return</span> config;</span><br><span class="line">    &#125;, err =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 响应拦截</span></span><br><span class="line">    instance.interceptors.response.use(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> res.data</span><br><span class="line">    &#125;,err =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//发送真正的网络请求 </span></span><br><span class="line">    <span class="keyword">return</span> instance(config);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//home.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;request&#125; <span class="keyword">from</span> <span class="string">'./request'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getHomeMultidata</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> request(&#123;</span><br><span class="line">        url: <span class="string">'/home/multidata'</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//home.vue</span></span><br><span class="line"><span class="keyword">import</span> &#123;getHomeMultidata&#125; <span class="keyword">from</span> <span class="string">'../../network/home'</span></span><br><span class="line">getHomeMultidata().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">"banner"</span>, res.data.banner);</span><br><span class="line">                <span class="keyword">this</span>.banner = res.data.banner.list;</span><br><span class="line">                <span class="keyword">this</span>.recommend = res.data.recommend.list;</span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(err);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -248,7 +261,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+              <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
           </div>
 
         
@@ -256,11 +269,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/03/15/hexo%E6%90%AD%E8%BD%BD%E5%8D%9A%E5%AE%A2/" rel="next" title="hexo搭载博客并部署到github">
-      hexo搭载博客并部署到github <i class="fa fa-chevron-right"></i>
+    <a href="/2020/03/27/vue-vuex/" rel="prev" title="vue-vuex">
+      <i class="fa fa-chevron-left"></i> vue-vuex
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     

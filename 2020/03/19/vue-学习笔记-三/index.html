@@ -28,7 +28,7 @@
 <meta property="og:description" content="在vue的模块化开发中需要用到webpack">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-19T14:26:39.000Z">
-<meta property="article:modified_time" content="2020-03-21T04:01:20.235Z">
+<meta property="article:modified_time" content="2020-03-23T16:05:24.686Z">
 <meta property="article:author" content="ashelly">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="webpack">
@@ -195,7 +195,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-21 12:01:20" itemprop="dateModified" datetime="2020-03-21T12:01:20+08:00">2020-03-21</time>
+                <time title="修改时间：2020-03-24 00:05:24" itemprop="dateModified" datetime="2020-03-24T00:05:24+08:00">2020-03-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,12 +221,16 @@
         <p>在vue的模块化开发中需要用到webpack</p>
 <a id="more"></a>
 
-<h5 id="webpack是一个现代的JavaScript应用的静态模块打包工具"><a href="#webpack是一个现代的JavaScript应用的静态模块打包工具" class="headerlink" title="webpack是一个现代的JavaScript应用的静态模块打包工具"></a>webpack是一个现代的JavaScript应用的静态模块打包工具</h5><p>webpack其中一个核心就是让我们可能进行模块化开发，并且会帮助我们处理模块间的依赖关系。css，图片，json文件等等在webpack中都可以被当作模块来使用</p>
+<h5 id="webpack是一个现代的JavaScript应用的静态模块打包工具"><a href="#webpack是一个现代的JavaScript应用的静态模块打包工具" class="headerlink" title="webpack是一个现代的JavaScript应用的静态模块打包工具"></a>webpack是一个现代的JavaScript应用的静态模块打包工具</h5><ul>
+<li><p>两个核心：模块化、打包</p>
+</li>
+<li><p>webpack让我们可能进行模块化开发，并且会帮助我们处理模块间的依赖关系。css，图片，json文件等等在webpack中都可以被当作模块来使用</p>
+</li>
+</ul>
 <hr>
 <h5 id="grunt-gulp"><a href="#grunt-gulp" class="headerlink" title="grunt/gulp"></a>grunt/gulp</h5><ul>
 <li>grunt/gulp的核心是task</li>
-<li>我们可以配置一系列的Task,并且定义task要处理的事务（例如ES6,ts转化，图片压缩，scss转成css)</li>
-<li>之后让grunt/gulp来执行这些task，而让整个流程自动化</li>
+<li>我们可以配置一系列的Task,并且定义task要处理的事务（例如ES6,ts转化，图片压缩，scss转成css)，之后让grunt/gulp来执行这些task，而让整个流程自动化</li>
 <li>所以grunt/gulp也被称为前端自动化任务管理工具</li>
 <li>如果工程依赖非常简单，甚至没有用到模块化的概念，只需要进行简单的合并、压缩，就使用grunt/gulp</li>
 </ul>
@@ -235,6 +239,131 @@
 <li>grunt/gulp更加强调的是前端流程自动化，模块化不是核心。</li>
 <li>webpack更加强调模块化开发管理，而文件压缩合并、预处理等功能，是附带功能。</li>
 </ul>
+<hr>
+<h5 id="webpack全局安装-局部安装"><a href="#webpack全局安装-局部安装" class="headerlink" title="webpack全局安装/局部安装"></a>webpack全局安装/局部安装</h5><ul>
+<li>每个项目都要本地安装webpack，</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 开发时依赖</span><br><span class="line">&quot;devDependencies&quot;: &#123;</span><br><span class="line"></span><br><span class="line">  &quot;webpack&quot;: &quot;^3.6.0&quot;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>package.json中的scripts的脚本在执行时会按照一定的顺序寻找命令对应的位置。首先会在本地的node_modules/bin路径中找对应的命令，如果没有找到才会去全局的环境变量中找。</li>
+</ul>
+<hr>
+<h5 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h5><ul>
+<li><p>loader是webpack中一个非常核心的概念</p>
+</li>
+<li><p>不同的loader处理不同的文件</p>
+</li>
+<li><p>使用步骤</p>
+<ul>
+<li><p>安装 loader，使用到哪些就安装哪些loader</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//css</span></span><br><span class="line">npm install css-loader style-loader --save-dev</span><br><span class="line"><span class="comment">//less</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//vue</span></span><br><span class="line">npm install vue-loader vue-template-compiler --save-dev</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>在配置文件中配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">          &#123;</span><br><span class="line">            test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">            <span class="comment">// css-loder只负责将css文件进行加载</span></span><br><span class="line">            <span class="comment">// style-loder负责将样式添加到DOM中</span></span><br><span class="line">            use: [ <span class="string">'style-loader'</span>,<span class="string">'css-loader'</span> ]</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            test: <span class="regexp">/\.less$/</span>,</span><br><span class="line">            <span class="comment">// 将 css-loader、style-loader 和 less-loader 链式调用，</span></span><br><span class="line">            <span class="comment">// 可以把所有样式立即应用于 DOM。</span></span><br><span class="line">            use: [&#123;</span><br><span class="line">                loader: <span class="string">"style-loader"</span> </span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                loader: <span class="string">"css-loader"</span> </span><br><span class="line">            &#125;, &#123;</span><br><span class="line">                loader: <span class="string">"less-loader"</span> <span class="comment">// compiles Less to CSS</span></span><br><span class="line">            &#125;]</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            test: <span class="regexp">/\.(png|jpg|gif)$/</span>,</span><br><span class="line">            use: [</span><br><span class="line">              &#123;</span><br><span class="line">                loader: <span class="string">'url-loader'</span>,</span><br><span class="line">                options: &#123;</span><br><span class="line">                  <span class="comment">// 当加载的图片，小于limit时，会将图片编译成base64字符串形式</span></span><br><span class="line">                  <span class="comment">// 大于Limit时，需要使用file-loader模块进行加载</span></span><br><span class="line">                  limit: <span class="number">10000</span>，</span><br><span class="line">                  <span class="comment">// images =&gt; 文件要打包到的文件夹</span></span><br><span class="line">                  <span class="comment">// [name] =&gt; 获取图片原来的名字</span></span><br><span class="line">                  <span class="comment">// [hash:8] =&gt; 为了防止图片名称冲突，使用Hash，保留8位</span></span><br><span class="line">                  <span class="comment">// [ext] =&gt; 保留图片的拓展名</span></span><br><span class="line">                  name: <span class="string">'images/[name].[hash:8].[ext]'</span></span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            ]</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li><p>使用多个loader时，webpack是从右向左读的。</p>
+</li>
+<li><p>webpack处理图片文件时会将其打包到dist文件夹里，所以要在配置文件中配置publicPath: ‘dist/‘,之后webpack打包遇到url时会在路径前自动加上’dist/‘。</p>
+</li>
+</ul>
+<hr>
+<p>webpack打包的js文件并没有将es6语法转成es5，那么就意味着一些对es6还不支持的浏览器没有办法很好的运行代码。这时就需要使用babel。</p>
+<ul>
+<li><h5 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h5><ul>
+<li><p>安装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev babel-loader@<span class="number">7</span> babel-core babel-preset-es2015</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在配置文件中配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">         test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">         exclude: <span class="regexp">/(node_modules|bower_components)/</span>,</span><br><span class="line">         use: &#123;</span><br><span class="line">           loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">           options: &#123;</span><br><span class="line">             presets: [<span class="string">'es2015'</span>]</span><br><span class="line">           &#125;</span><br><span class="line">         &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h5 id="引入vuejs"><a href="#引入vuejs" class="headerlink" title="引入vuejs"></a>引入vuejs</h5><ul>
+<li><p>使用npm安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>vue构建时有两个版本</p>
+<ul>
+<li>runtime-only =&gt;代码中，不可以有任何的template</li>
+<li>runtime-compiler =&gt;代码中可以有template，因为有compiler可以编译template</li>
+</ul>
+</li>
+<li><p>默认是用runtime-only，所以这时我们得配置,用alias对象指定使用版本</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">      alias: &#123;</span><br><span class="line">        <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.esm.js'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>el  和 template的区别</p>
+<ul>
+<li>在vue实例中，一旦定义了一个template，vue内部会将el挂载的内容替换成template所有的内容。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h5 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h5><ul>
+<li><p>plugin是插件的意思，通常是用于对某个现有的架构进行扩展</p>
+</li>
+<li><p>webpack中的插件，就是对webpack现有的功能的各种扩展，比如打包优化，文件压缩等等</p>
+</li>
+<li><p>loader 和 plugin的区别</p>
+<ul>
+<li>loader主要用于转换某些类型的模块，它是一个转换器</li>
+<li>plugin是插件，它是对webpack本身的扩展，是一个扩展器</li>
+</ul>
+</li>
+<li><p>plugin的使用过程</p>
+<ul>
+<li>通过npm安装需要使用的plugins</li>
+<li>在配置文件中的plugin进行配置</li>
+</ul>
+</li>
+<li><p>打包html的plugin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><h5 id="搭建本地服务器"><a href="#搭建本地服务器" class="headerlink" title="搭建本地服务器"></a>搭建本地服务器</h5><ul>
+<li><p>webpack提供了一个本地开发服务器，这个本地服务器基于node.js搭建，内部使用express框架，</p>
+</li>
+<li><p>安装webpack-dev-server</p>
+</li>
+<li><p>配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">     contentBase: &#39;.&#x2F;dist&#39;,</span><br><span class="line">     &#x2F;&#x2F; 进行实时监听</span><br><span class="line">     inline: true</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;dev&quot;: &quot;webpack-dev-server --open&quot;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<hr>
 
     </div>
 
@@ -258,8 +387,8 @@
       <i class="fa fa-chevron-left"></i> vue-组件化开发
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/03/21/%E7%AE%97%E6%B3%95%E9%A2%98%E9%81%87%E5%88%B0%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="next" title="算法题遇到的知识点">
-      算法题遇到的知识点 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/03/21/%E7%AE%97%E6%B3%95%E9%A2%98%E9%81%87%E5%88%B0%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="next" title="学习笔记">
+      学习笔记 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -320,7 +449,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#webpack是一个现代的JavaScript应用的静态模块打包工具"><span class="nav-number">1.</span> <span class="nav-text">webpack是一个现代的JavaScript应用的静态模块打包工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#grunt-gulp"><span class="nav-number">2.</span> <span class="nav-text">grunt&#x2F;gulp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#webpack和grunt-gulp的对比"><span class="nav-number">3.</span> <span class="nav-text">webpack和grunt&#x2F;gulp的对比</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#webpack是一个现代的JavaScript应用的静态模块打包工具"><span class="nav-number">1.</span> <span class="nav-text">webpack是一个现代的JavaScript应用的静态模块打包工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#grunt-gulp"><span class="nav-number">2.</span> <span class="nav-text">grunt&#x2F;gulp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#webpack和grunt-gulp的对比"><span class="nav-number">3.</span> <span class="nav-text">webpack和grunt&#x2F;gulp的对比</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#webpack全局安装-局部安装"><span class="nav-number">4.</span> <span class="nav-text">webpack全局安装&#x2F;局部安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#loader"><span class="nav-number">5.</span> <span class="nav-text">loader</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#babel"><span class="nav-number">6.</span> <span class="nav-text">babel</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引入vuejs"><span class="nav-number">7.</span> <span class="nav-text">引入vuejs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#plugin"><span class="nav-number">8.</span> <span class="nav-text">plugin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#搭建本地服务器"><span class="nav-number">9.</span> <span class="nav-text">搭建本地服务器</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -336,7 +465,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -349,7 +478,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -388,7 +517,7 @@
   </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.2k字</span>
+  <span class="post-count">博客全站共7.5k字</span>
 </div>
         
 
